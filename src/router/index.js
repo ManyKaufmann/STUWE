@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../views/Home.vue";
-import Map from "../views/Map.vue";
+import Home from "../views/Home.vue"; // wird statisch geladen
 
 const routes = [
   {
@@ -20,7 +19,7 @@ const routes = [
   {
     path: "/map",
     name: "Map",
-    component: Map,
+    component: () => import(/* webpackChunkName: "about" */ "../views/Map.vue"),
   },
 ];
 
