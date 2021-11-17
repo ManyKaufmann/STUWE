@@ -38,8 +38,8 @@ export default {
 
 <style scoped>
 .map {
-  height: 50vh;
-  width: 50vw;
+  height: 75vh;
+  width: 75vw;
 }
 .mapContainer {
   display: flex;
