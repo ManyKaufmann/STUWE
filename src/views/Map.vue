@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>My Map</h1>
+    <h1>We are the best</h1>
     <div class="mapContainer">
       <div ref="container" class="map"></div>
     </div>
@@ -25,7 +25,8 @@ export default {
       "pk.eyJ1IjoiZGlnaXRhbGlkZWF0aW9uaWFhYmRlcmgiLCJhIjoiY2t2dGlsdGhqMHMzcjJ1bHlkY2V6eHY4bCJ9.v0uobe5Oyv26gnP5b6m2EA";
     new mapboxgl.Map({
       container: this.$refs.container, // container ID
-      style: "mapbox://styles/digitalideationiaabderh/ckw3d2uis68ss14nxz4o1x4ah", // style URL
+      style:
+        "mapbox://styles/digitalideationiaabderh/ckw3d2uis68ss14nxz4o1x4ah", // style URL
       center: [-74.5, 40], // starting position [lng, lat]
       zoom: 9, // starting zoom
     });
