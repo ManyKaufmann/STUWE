@@ -20,7 +20,7 @@ export default {
 
   mounted: async function () {
     mapboxgl.accessToken =
-      "pk.eyJ1IjoibWFueWsiLCJhIjoiY2t2dGlvd2drMnZvejJwa2xrOWtzeWs4aCJ9.CivNEj2VLiQNMt1bDIX1Og";
+      "pk.eyJ1IjoibWFueWsiLCJhIjoiY2t2dGlvd2drMnZvejJwa2xrOWtzeWs4aCJ9.pk.eyJ1IjoibWFueWsiLCJhIjoiY2t2dGlvd2drMnZvejJwa2xrOWtzeWs4aCJ9.CivNEj2VLiQNMt1bDIX1Og";
     new mapboxgl.Map({
       container: this.$refs.container, // container ID
       style: "mapbox://styles/mapbox/streets-v11", // style URL
@@ -34,7 +34,7 @@ export default {
 <style src="mapbox-gl/dist/mapbox-gl.css"></style>
 
 <style scoped>
-.map {
+.mapContainer {
   height: 50vh;
   width: 50vw;
 }
