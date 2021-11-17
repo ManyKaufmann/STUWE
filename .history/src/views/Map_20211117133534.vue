@@ -22,7 +22,7 @@ export default {
 
   mounted: async function () {
     mapboxgl.accessToken =
-      "pk.eyJ1IjoiZGlnaXRhbGlkZWF0aW9uaWFhYmRlcmgiLCJhIjoiY2t2dGlsdGhqMHMzcjJ1bHlkY2V6eHY4bCJ9.v0uobe5Oyv26gnP5b6m2EA";
+      "pk.pk.eyJ1IjoiZGlnaXRhbGlkZWF0aW9uaWFhYmRlcmgiLCJhIjoiY2t2dGlsdGhqMHMzcjJ1bHlkY2V6eHY4bCJ9.v0uobe5Oyv26gnP5b6m2EA";
     new mapboxgl.Map({
       container: this.$refs.container, // container ID
       style: "mapbox://styles/digitalideationiaabderh/ckw3d2uis68ss14nxz4o1x4ah", // style URL
