@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>My Map</h1>
-    <div ref="container" class="map"></div>
+    <div class="mapContainer">
+      <div ref="container" class="map"></div>
+    </div>
   </div>
 </template>
 
