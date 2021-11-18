@@ -1,10 +1,10 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Main from "../views/Main.vue";
+
 const routes = [
   {
-    path: "/",
-    name: "Main",
-    component: Main,
+    path: "/map",
+    name: "Map",
+    component: () => import(/* webpackChunkName: "map" */ "../views/Map.vue"),
   },
 ];
 

@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <h1>We are the best</h1>
-    <div class="mapContainer">
-      <div ref="container" class="map"></div>
-    </div>
-  </div>
+ <map-background
 </template>
 
 <script>
 // @ is an alias to /src
 import mapboxgl from "mapbox-gl";
+import MapBackground from '../components/MapBackground.vue';
 
 export default {
+  components: { MapBackground },
   name: "Map",
 
   data: function () {
