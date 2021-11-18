@@ -3,16 +3,50 @@
     <div class="start-container">Start page (green)</div>
     <div id="content-container">
       <h1>Here comes the content!</h1>
+      <!-- <div
+        v-for="d in hsluFacts"
+        :key="d.hsluFacts">
+        <Departement
+        :departementName="d.fields.departementName"
+        :infoDep="d.fields.infoDepartemente"
+        :studiengaenge="d.fields.studiengnge"
+      /> -->
     </div>
   </div>
 </template>
 
-// <script>
-// import { defineComponent } from "@vue/composition-api";
+<script>
+// import Department from "@/components/Department.vue";
+// import { createDep } from "contentful";
 
-// export default defineComponent({
-//   setup() {},
-// });
+// export default {
+//   name: "Content",
+//   components: {
+//     Department,
+//   },
+//   data: function () {
+//     return {
+//       department: [],
+//     };
+//   },
+
+//   created: function () {
+//     // let dep = createDep({
+//     //   space: "ysi1w9hs8nqb",
+//     //   accessToken: "VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk",
+//     // });
+
+//     dep
+//       .getEntries({
+//         content_type: "department",
+//       })
+
+//       .then((entries) => {
+//         console.log(entries);
+//         this.department = entries.items;
+//       });
+//   },
+// };
 //
 </script>
 
@@ -34,8 +68,7 @@ h1 {
   width: 100vw;
   background-color: rgba(46, 255, 46, 0.5);
   backdrop-filter: blur(7px);
-    overflow-y: scroll;
-
+  overflow-y: scroll;
 }
 
 #content-container {

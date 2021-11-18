@@ -2,6 +2,7 @@
   <div class="department">
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
+    <div>{{studiengnge}}
   </div>
 </template>
 
