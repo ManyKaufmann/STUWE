@@ -1,5 +1,9 @@
 <template>
-  <div class="start-container"></div>
+  <div class="start-container">
+
+      
+  </div>
+  
 </template>
 
 

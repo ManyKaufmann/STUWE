@@ -23,7 +23,6 @@ h1 {
 
 .main-container {
   position: fixed;
-  top: 0;
   /* height: 100vh; */
   /* width: 100vw; */
 }

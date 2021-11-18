@@ -23,24 +23,22 @@ h1 {
 
 .main-container {
   position: fixed;
-  top: 0;
-  /* height: 100vh; */
-  /* width: 100vw; */
+  height: 100vh;
+  width: 100vw;
 }
 
 .start-container {
-  top: 0%;
+  /* position: fixed; */
+  top: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(46, 255, 46, 0.5);
+  background-color: green(224, 205, 214, 0.5);
   backdrop-filter: blur(7px);
-    overflow-y: scroll;
-
 }
 
 #content-container {
   width: 50%;
-  margin-left: 50%;
+  /* margin-left: 50%; */
   right: 0;
   top: 0;
   /* position: fixed; */

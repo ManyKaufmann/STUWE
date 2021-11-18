@@ -1,7 +1,5 @@
 <template>
-<Main/>
-
-  <router-view />
+  <Main />
 </template>
 
 <style>
