@@ -8,7 +8,7 @@
           <Departement 
           :departementName="d.fields.departementName"
           :infoDepartemente="d.fields.infoDepartemente"
-          :studiengnge="d.fields.studiengnge"
+          :studiengaenge="d.fields.studiengaenge"
            />
         </li>
       </ul>

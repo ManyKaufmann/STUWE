@@ -4,12 +4,12 @@
     <div id="content-container">
       <h1>Here comes the content!</h1>
       <ul id="array-rendering">
-        <li v-for="d in departement" :key="d.hsluFacts">
-          <Departement 
-          :departementName="d.fields.departementName"
-          :infoDepartemente="d.fields.infoDepartemente"
-          :studiengnge="d.fields.studiengnge"
-           />
+        <li v-for="d in departements" :key="d.hsluFacts">
+          <Departement
+            :departementName="d.fields.departementName"
+            :infoDep="d.fields.infoDepartemente"
+            :studiengaenge="d.fields.studiengnge"
+          />
         </li>
       </ul>
     </div>
@@ -27,7 +27,7 @@ export default {
   },
   data: function () {
     return {
-      departement: [],
+      departements: [],
     };
   },
 

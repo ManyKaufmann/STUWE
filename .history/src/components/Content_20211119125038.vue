@@ -4,20 +4,20 @@
     <div id="content-container">
       <h1>Here comes the content!</h1>
       <ul id="array-rendering">
-        <li v-for="d in departement" :key="d.hsluFacts">
-          <Departement 
-          :departementName="d.fields.departementName"
-          :infoDepartemente="d.fields.infoDepartemente"
-          :studiengnge="d.fields.studiengnge"
-           />
-        </li>
+        <!-- <li v-for="d in departements" :key="d.hsluFacts"> -->
+          <Departement
+            :departementName="dhello"
+            :infoDep="d.fields.infoDepartemente"
+            :studiengaenge="d.fields.studiengnge"
+          />
+        <!-- </li> -->
       </ul>
     </div>
   </div>
 </template>
 
 <script>
-import Departement from "./Departement.vue";
+import Departement from "./Departement.vue"
 import { createClient } from "contentful";
 
 export default {
@@ -27,7 +27,7 @@ export default {
   },
   data: function () {
     return {
-      departement: [],
+      departements: [],
     };
   },
 
