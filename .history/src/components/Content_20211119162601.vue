@@ -36,8 +36,15 @@ export default {
     };
   },
 
-  created: async function () {
+  created: function () {
     this.departement = await contentful.getHsluFacts();
+      // .getEntries({
+      //   content_type: "hsluFacts",
+      // })
+      // .then((entries) => {
+      //   console.log(entries);
+      //   this.departement = entries.items;
+      // });
   },
 };
 </script>

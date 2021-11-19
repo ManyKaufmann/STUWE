@@ -5,14 +5,14 @@
     <div id="content-container">
       <h1>Here comes the content!</h1>
       <ul id="array-rendering">
-        <li v-for="d in departement" :key="d.hsluFacts">
+        <!-- <li v-for="d in departement" :key="d.hsluFacts"> -->
           <Departement
-            :departementName="d.fields.departementName"
+            :departementName="hi"
             :infoDepartemente="d.fields.infoDepartemente"
             :studiengnge="d.fields.studiengnge"
             :gebude="d.fields.gebude"
           />
-        </li>
+        <!-- </li> -->
       </ul>
     </div>
   </div>
@@ -36,8 +36,15 @@ export default {
     };
   },
 
-  created: async function () {
-    this.departement = await contentful.getHsluFacts();
+  created: function () {
+    contentful.getHsluFacts();
+      // .getEntries({
+      //   content_type: "hsluFacts",
+      // })
+      // .then((entries) => {
+      //   console.log(entries);
+      //   this.departement = entries.items;
+      // });
   },
 };
 </script>
