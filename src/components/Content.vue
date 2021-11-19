@@ -3,51 +3,49 @@
     <div class="start-container">Start page (green)</div>
     <div id="content-container">
       <h1>Here comes the content!</h1>
-      <!-- <div
-        v-for="d in hsluFacts"
-        :key="d.hsluFacts">
+      <ul id="array-rendering">
+      <li v-for="d in hsluFacts" :key="d.hsluFacts"> 
         <Departement
-        :departementName="d.fields.departementName"
-        :infoDep="d.fields.infoDepartemente"
-        :studiengaenge="d.fields.studiengnge"
-      /> -->
-    </div>
+      :departementName="d.fields.departementName"
+      :infoDep="d.fields.infoDepartemente" :studiengaenge="d.fields.studiengnge"
+    />
+      </li>
+      </ul>
   </div>
 </template>
 
 <script>
-// import Department from "@/components/Department.vue";
-// import { createDep } from "contentful";
+import Department from "@/components/Department.vue";
+import { createDep } from "contentful";
 
-// export default {
-//   name: "Content",
-//   components: {
-//     Department,
-//   },
-//   data: function () {
-//     return {
-//       department: [],
-//     };
-//   },
+export default {
+  name: "Content",
+  components: {
+    Department,
+  },
+  data: function () {
+    return {
+      department: [],
+    };
+  },
 
-//   created: function () {
-//     // let dep = createDep({
-//     //   space: "ysi1w9hs8nqb",
-//     //   accessToken: "VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk",
-//     // });
+  created: function () {
+    let dep = createDep({
+      space: "ysi1w9hs8nqb",
+      accessToken: "VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk",
+    });
 
-//     dep
-//       .getEntries({
-//         content_type: "department",
-//       })
+    dep
+      .getEntries({
+        content_type: "department",
+      })
 
-//       .then((entries) => {
-//         console.log(entries);
-//         this.department = entries.items;
-//       });
-//   },
-// };
-//
+      .then((entries) => {
+        console.log(entries);
+        this.department = entries.items;
+      });
+  },
+};
 </script>
 
 <style scoped>
