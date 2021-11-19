@@ -1,11 +1,9 @@
 <template>
   <div class="departement">
-    <h1>hello</h1>
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
     <div>{{ gebude.fields.title }}</div>
-    <img :src="gebude.fields.file.url" >
   </div>
 </template>
 

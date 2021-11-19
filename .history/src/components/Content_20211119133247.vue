@@ -1,17 +1,13 @@
 <template>
   <div id="main-container">
-    <Start />
-
+    <div class="start-container">Start page (green)</div>
     <div id="content-container">
       <h1>Here comes the content!</h1>
       <ul id="array-rendering">
         <li v-for="d in departement" :key="d.hsluFacts">
-          <Departement
-            :departementName="d.fields.departementName"
-            :infoDepartemente="d.fields.infoDepartemente"
-            :studiengnge="d.fields.studiengnge"
-            :gebude="d.fields.gebude"
-          />
+          <Departement 
+          :departement= hsluFacts.fields.departement
+           />
         </li>
       </ul>
     </div>
@@ -19,15 +15,12 @@
 </template>
 
 <script>
-import Start from "./Start.vue";
 import Departement from "./Departement.vue";
-// import { createClient } from "contentful";
-import contentful from "../modules/Contentful.js";
+import { createClient } from "contentful";
 
 export default {
   name: "Content",
   components: {
-    Start,
     Departement,
   },
   data: function () {
@@ -36,8 +29,21 @@ export default {
     };
   },
 
-  created: async function () {
-    this.departement = await contentful.getHsluFacts();
+  created: function () {
+    let client = createClient({
+      space: "ysi1w9hs8nqb",
+      accessToken: "VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk",
+    });
+
+    client
+      .getEntries({
+        content_type: "hsluFacts",
+      })
+
+      .then((entries) => {
+        console.log(entries);
+        this.departement = entries.items;
+      });
   },
 };
 </script>
@@ -52,6 +58,15 @@ h1 {
   top: 0;
   /* height: 100vh; */
   /* width: 100vw; */
+}
+
+.start-container {
+  top: 0%;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(46, 255, 46, 0.5);
+  backdrop-filter: blur(7px);
+  overflow-y: scroll;
 }
 
 #content-container {

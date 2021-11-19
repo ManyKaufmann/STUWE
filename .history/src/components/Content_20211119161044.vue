@@ -21,8 +21,8 @@
 <script>
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
-// import { createClient } from "contentful";
-import contentful from "../modules/Contentful.js";
+import { createClient } from "contentful";
+import contentful from "@/modules/contentful.js";
 
 export default {
   name: "Content",
@@ -36,8 +36,16 @@ export default {
     };
   },
 
-  created: async function () {
-    this.departement = await contentful.getHsluFacts();
+  created: function () {
+    contentful
+      .getEntries({
+        content_type: "hsluFacts",
+      })
+
+      .then((entries) => {
+        console.log(entries);
+        this.departement = entries.items;
+      });
   },
 };
 </script>
