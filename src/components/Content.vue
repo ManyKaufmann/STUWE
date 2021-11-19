@@ -7,25 +7,26 @@
       <li v-for="d in hsluFacts" :key="d.hsluFacts"> 
         <Departement
       :departementName="d.fields.departementName"
-      :infoDep="d.fields.infoDepartemente" :studiengaenge="d.fields.studiengnge"
-    />
+      :infoDep="d.fields.infoDepartemente" 
+      :studiengaenge="d.fields.studiengnge" />
       </li>
       </ul>
+  </div>
   </div>
 </template>
 
 <script>
-import Department from "@/components/Department.vue";
+import Departement from "@/components/Departement.vue";
 import { createDep } from "contentful";
 
 export default {
   name: "Content",
   components: {
-    Department,
+    Departement,
   },
   data: function () {
     return {
-      department: [],
+      departement: [],
     };
   },
 
@@ -37,12 +38,12 @@ export default {
 
     dep
       .getEntries({
-        content_type: "department",
+        content_type: "departement",
       })
 
       .then((entries) => {
         console.log(entries);
-        this.department = entries.items;
+        this.departement = entries.items;
       });
   },
 };
