@@ -48,6 +48,8 @@ h1 {
 .main-container {
   position: fixed;
   top: 0;
+  /* height: 100vh; */
+  /* width: 100vw; */
 }
 
 #content-container {
@@ -55,6 +57,7 @@ h1 {
   margin-left: 50%;
   right: 0;
   top: 0;
+  /* position: fixed; */
   height: 200vh;
   background-color: rgba(224, 205, 214, 0.5);
   overflow-y: scroll;

@@ -1,6 +1,7 @@
 <template>
   <div id="main-container">
     <Start />
+
     <div id="content-container">
       <h1>Here comes the content!</h1>
       <ul id="array-rendering">
@@ -20,6 +21,7 @@
 <script>
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
+// import { createClient } from "contentful";
 import contentful from "../modules/contentful.js";
 
 export default {
@@ -48,6 +50,8 @@ h1 {
 .main-container {
   position: fixed;
   top: 0;
+  /* height: 100vh; */
+  /* width: 100vw; */
 }
 
 #content-container {
@@ -55,6 +59,7 @@ h1 {
   margin-left: 50%;
   right: 0;
   top: 0;
+  /* position: fixed; */
   height: 200vh;
   background-color: rgba(224, 205, 214, 0.5);
   overflow-y: scroll;

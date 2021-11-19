@@ -14,7 +14,7 @@ class Contentful {
             .getEntries({
                 content_type: "hsluFacts"
             });
-        console.log(result.items[0]);
+        console.log(result.items.fields[0]);
         return result.items;
     }
 

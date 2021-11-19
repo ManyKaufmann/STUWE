@@ -1,10 +1,16 @@
 <template>
   <div id="main-container">
     <Start />
+
     <div id="content-container">
       <h1>Here comes the content!</h1>
       <ul id="array-rendering">
-        <ul v-for="d in departement" :key="d.hsluFacts" :class="d.fields.departementName">
+        <ul
+          ref="Dep"
+          v-for="d in departement"
+          :key="d.hsluFacts"
+          :class="d.fields.departementName"
+        >
           <Departement
             :departementName="d.fields.departementName"
             :infoDepartemente="d.fields.infoDepartemente"
@@ -20,7 +26,8 @@
 <script>
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
-import contentful from "../modules/contentful.js";
+// import { createClient } from "contentful";
+import contentful from "../modules/Contentful.js";
 
 export default {
   name: "Content",
@@ -36,6 +43,21 @@ export default {
 
   created: async function () {
     this.departement = await contentful.getHsluFacts();
+    let observer;
+
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.9,
+    };
+
+    observer = new IntersectionObserver(this.handleIntersect, options);
+    observer.observe(this.$refs.Dep);
+  },
+  methods: {
+    handleIntersect(entries) {
+      console.log(entries);
+    },
   },
 };
 </script>
@@ -48,6 +70,8 @@ h1 {
 .main-container {
   position: fixed;
   top: 0;
+  /* height: 100vh; */
+  /* width: 100vw; */
 }
 
 #content-container {
@@ -55,6 +79,7 @@ h1 {
   margin-left: 50%;
   right: 0;
   top: 0;
+  /* position: fixed; */
   height: 200vh;
   background-color: rgba(224, 205, 214, 0.5);
   overflow-y: scroll;
