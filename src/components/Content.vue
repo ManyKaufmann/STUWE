@@ -17,7 +17,7 @@
 
 <script>
 import Departement from "@/components/Departement.vue";
-import { createDep } from "contentful";
+import { createClient } from "contentful";
 
 export default {
   name: "Content",
@@ -31,12 +31,12 @@ export default {
   },
 
   created: function () {
-    let dep = createDep({
+    let client = createClient({
       space: "ysi1w9hs8nqb",
       accessToken: "VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk",
     });
 
-    dep
+    client
       .getEntries({
         content_type: "departement",
       })
