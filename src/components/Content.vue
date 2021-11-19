@@ -22,7 +22,7 @@
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
 // import { createClient } from "contentful";
-import contentful from "../modules/Contentful.js";
+import contentful from "../modules/contentful.js";
 
 export default {
   name: "Content",
