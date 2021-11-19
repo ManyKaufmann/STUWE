@@ -6,10 +6,7 @@
       <ul id="array-rendering">
         <li v-for="d in departement" :key="d.hsluFacts">
           <Departement 
-          :departementName="d.fields.departementName"
-          :infoDepartemente="d.fields.infoDepartemente"
-          :studiengnge="d.fields.studiengnge"
-          :gebude="d.fields.gebude"
+          :departement= hsluFacts.fields.departement
            />
         </li>
       </ul>

@@ -9,7 +9,7 @@
           :departementName="d.fields.departementName"
           :infoDepartemente="d.fields.infoDepartemente"
           :studiengnge="d.fields.studiengnge"
-          :gebude="d.fields.gebude"
+          :fotoDep="d.fields.gebude.fields"
            />
         </li>
       </ul>

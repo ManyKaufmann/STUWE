@@ -1,6 +1,6 @@
 <template>
   <div class="departement">
-    <h1>{{ departementName }}</h1>
+    <h1 class="departementname">{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
     <div>{{ gebude.fields.title }}</div>

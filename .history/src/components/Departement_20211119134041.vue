@@ -4,7 +4,7 @@
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
     <div>{{ gebude.fields.title }}</div>
-    <img :src="gebude.fields.file.url" >
+    <img src="gebude.fields.file.url" alt="">
   </div>
 </template>
 
