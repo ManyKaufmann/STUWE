@@ -1,0 +1,52 @@
+<template>
+  <div :class="active ? 'active' : ''">
+    <section :id="departementId">
+      <h1>{{ departementName }}</h1>
+      <div>{{ infoDepartemente }}</div>
+      <div>{{ studiengnge }}</div>
+      <div>{{ gebude.fields.title }}</div>
+      <img :src="gebude.fields.file.url" />
+    </section>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "Departement",
+  props: {
+    departementId: String,
+    departementName: String,
+    infoDepartemente: String,
+    // Gebäude Illu
+    studiengnge: String,
+    gebude: Object,
+  },
+  methods: {
+    checkBounds() {
+      let bounds = this.$el.getBoundingClientRect();
+      if (bounds.top < window.innerHeight / 2 && bounds.bottom > 0) {
+        this.$emit("set-active");
+      }
+    },
+  },
+  created() {
+    window.addEventListener("scroll", this.checkBounds);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.checkBounds);
+  },
+};
+</script>
+<style scoped>
+section {
+    padding: 25px 80px;
+    border-bottom: 0px solid #ddd;
+    opacity: 0.25;
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+}
+
+section.active {
+  opacity: 1;
+}
+</style>
