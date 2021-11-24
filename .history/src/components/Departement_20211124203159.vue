@@ -1,7 +1,5 @@
 <template>
   <section :id="departementId">
-    <img :class="dep-titel" :src="departementTitel.fields.file.url" />
-
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
@@ -14,7 +12,7 @@ export default {
   name: "Departement",
   props: {
     departementId: String,
-    departementTitel: Object,
+    departementName: String,
     infoDepartemente: String,
     studiengnge: String,
     studiengaenge: String,
@@ -24,6 +22,7 @@ export default {
 </script>
 <style scoped>
 section {
+  padding: 25px 80px;
   padding-top: 40%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;

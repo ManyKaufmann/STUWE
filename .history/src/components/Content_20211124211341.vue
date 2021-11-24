@@ -5,7 +5,7 @@
       <ul id="array-rendering">
         <ul v-for="d in departement" :key="d.hsluFacts">
           <Departement
-            :departementTitel="d.fields.departementTitel"
+            :departementName="d.fields.departementTitel"
             :departementId="d.fields.departementId"
             :infoDepartemente="d.fields.infoDepartemente"
             :studiengnge="d.fields.studiengnge"
@@ -57,9 +57,7 @@ h1 {
   margin-left: 50%;
   right: 0;
   top: 0;
-  /* height: 200vh; */
   background-color: rgba(255, 226, 102, 0.7);
-  /* overflow-y: scroll; */
   backdrop-filter: blur(7px);
 }
 </style>
