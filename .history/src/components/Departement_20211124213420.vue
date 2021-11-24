@@ -24,6 +24,7 @@ export default {
 </script>
 <style scoped>
 section {
+  padding: 25px 80px;
   padding-top: 40%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;

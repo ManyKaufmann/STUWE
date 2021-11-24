@@ -1,8 +1,7 @@
 <template>
   <section :id="departementId">
-    <img :class="dep-titel" :src="departementTitel.fields.file.url" />
+    <img :src="departementTitel.fields.file.url" />
 
-    <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
@@ -25,6 +24,7 @@ export default {
 <style scoped>
 section {
   padding-top: 40%;
+  padding-bottom: 10%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;
   font-size: 13px;

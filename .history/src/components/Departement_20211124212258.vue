@@ -1,8 +1,7 @@
 <template>
   <section :id="departementId">
-    <img :class="dep-titel" :src="departementTitel.fields.file.url" />
+    <img :src="departementTitel.fields.file.url" />
 
-    <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
