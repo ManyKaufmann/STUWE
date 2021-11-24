@@ -2,7 +2,8 @@
   <section :id="departementId">
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
-    <div>{{ studiengnge }}</div>
+    <h1>{{ studiengnge }}</h1>
+    <div>{{ studiengaenge }}</div>
     <div>{{ gebude.fields.title }}</div>
     <img :src="gebude.fields.file.url" />
   </section>
@@ -17,6 +18,7 @@ export default {
     infoDepartemente: String,
     // Gebäude Illu
     studiengnge: String,
+    studiengaenge: String,
     gebude: Object,
   },
 };
