@@ -13,10 +13,10 @@ class Contentful {
       content_type: "hsluFacts",
     });
     const hsluDepartements = result.items.sort(
-      (teamA, teamB) => teamA.fields.reihenfolge - teamB.fields.reihenfolge,
-  )
-  console.log(hsluDepartements)
-  return hsluDepartements;
+      (teamA, teamB) => teamA.fields.reihenfolge - teamB.fields.reihenfolge
+    );
+    console.log(hsluDepartements);
+    return hsluDepartements;
   }
 
   async getStart() {
