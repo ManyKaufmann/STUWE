@@ -28,35 +28,35 @@ export default {
         },
         "soziale-arbeit": {
           bearing: 0,
-          center: [8.314879094092817 + 0.005, 47.04821555100333 - 0.001],
+          center: [8.314395993947985 + 0.005, 47.047973853710566 - 0.001],
           zoom: 16,
           speed: 0.5,
           pitch: 0,
         },
         "wirtschafts-haus": {
           bearing: 0,
-          center: [8.309652 + 0.005, 47.04907 - 0.001],
+          center: [8.309762477874758 + 0.005, 47.04903751737514 - 0.001],
           zoom: 16,
           speed: 0.8,
           pitch: 0,
         },
         "musik-haus": {
           bearing: 0,
-          center: [8.299038 + 0.005, 47.03812 - 0.001],
+          center: [8.296941518783571 + 0.005, 47.032709223659225 - 0.001],
           zoom: 16,
           speed: 0.5,
           pitch: 0,
         },
         "technik-und-architektur": {
           bearing: 0,
-          center: [8.305318 + 0.005, 47.01422 - 0.001],
+          center: [8.305846452713014 + 0.005, 47.01418693221685 - 0.001],
           zoom: 16,
           speed: 0.8,
           pitch: 0,
         },
         "design-und-kunst": {
           bearing: 0,
-          center: [8.277606 + 0.005, 47.07159 - 0.001],
+          center: [8.278305530548097 + 0.005, 47.07006336428073 - 0.001],
           zoom: 16,
           speed: 1,
           pitch: 0,
@@ -77,7 +77,7 @@ export default {
       "pk.eyJ1IjoibWFueWsiLCJhIjoiY2t2dGlvd2drMnZvejJwa2xrOWtzeWs4aCJ9.CivNEj2VLiQNMt1bDIX1Og";
     this.map = new mapboxgl.Map({
       container: this.$refs.container, // container ID
-      style: "mapbox://styles/manyk/ckw6cs81x8vi214mpmkqbs9wm", // style URL
+      style: "mapbox://styles/manyk/ckwdyx85f2h1914ocwl7g6649", // style URL
       center: [8.384674512423006 + 0.005, 47.00304458301781 - 0.001], // starting position [lng, lat]
       zoom: 16, // starting zoom
       bearing: 0,
