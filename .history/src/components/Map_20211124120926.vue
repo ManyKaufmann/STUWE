@@ -54,7 +54,7 @@ export default {
           zoom: 16,
           speed: 1,
           pitch: 0,
-        },
+        }, 
         "design-und-kunst": {
           bearing: 0,
           center: [8.277606, 47.07159],
@@ -63,34 +63,6 @@ export default {
           pitch: 0,
         },
       },
-      // geojson: {
-      //   type: "FeatureCollection",
-
-      //   features: [
-      //     {
-      //       type: "Feature",
-      //       geometry: {
-      //         type: "Point",
-      //         coordinates: [-77.032, 38.913],
-      //       },
-      //       properties: {
-      //         title: "Mapbox",
-      //         description: "Washington, D.C.",
-      //       },
-      //     },
-      //     {
-      //       type: "Feature",
-      //       geometry: {
-      //         type: "Point",
-      //         coordinates: [-122.414, 37.776],
-      //       },
-      //       properties: {
-      //         title: "Mapbox",
-      //         description: "San Francisco, California",
-      //       },
-      //     },
-      //   ],
-      // },
     };
   },
 
@@ -146,22 +118,8 @@ export default {
         return false;
       }
       const bounds = element.getBoundingClientRect();
-      return bounds.top < window.innerHeight && bounds.bottom > 0;
+      return bounds.top < window.innerHeight  && bounds.bottom > 0;
     },
-
-    // addMarkers() {
-    //   // add markers to map
-    //   for (const feature of geojson.features) {
-    //     // create a HTML element for each feature
-    //     const el = document.createElement("div");
-    //     el.className = "marker";
-
-    //     // make a marker for each feature and add to the map
-    //     new mapboxgl.Marker(el)
-    //       .setLngLat(feature.geometry.coordinates)
-    //       .addTo(map);
-    //   }
-    // },
 
     async getContentful() {
       let result = await contentful.getEntries({
@@ -192,13 +150,4 @@ export default {
   overflow-y: scroll;
   background-color: #fafafa;
 }
-
-/* .marker {
-  background-image: url("mapbox-icon.png");
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-} */
 </style>

@@ -23,8 +23,7 @@ export default {
 <style scoped>
 section {
   padding: 25px 80px;
-  padding-top: 50%;
-  padding-bottom: 50%;
+  padding-top: 50px;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;
   font-size: 13px;

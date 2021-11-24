@@ -3,10 +3,10 @@ import { createClient } from 'contentful'
 class Contentful {
 
     constructor() {
-        this.client = createClient({
-            space: 'ysi1w9hs8nqb',
-            accessToken: 'VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk'
-        })
+        this.client= createClient({
+        space: 'ysi1w9hs8nqb',
+        accessToken: 'VMBxczFLhJpJq09naVF2q44ubmFJ91Gm3098TrfYfuk'
+    })
     }
 
     async getHsluFacts() {
@@ -14,13 +14,12 @@ class Contentful {
             .getEntries({
                 content_type: "hsluFacts"
             });
-        const hsluDepartements = result.items.sort(
-            (teamA, teamB) => teamA.fields.reihenfolge - teamB.fields.reihenfolge,
-        )
-        console.log(hsluDepartements)
-        return hsluDepartements;
-    }
+        console.log(result.items +"adsfad");
 
+        
+        return result.items;
+    }  
+    
     async getStart() {
         let result = await this.client
             .getEntries({
@@ -28,8 +27,8 @@ class Contentful {
             });
         console.log(result.items);
         return result.items;
-    }
-
+    } 
+    
     async getDepartements() {
         let result = await this.client
             .getEntries({

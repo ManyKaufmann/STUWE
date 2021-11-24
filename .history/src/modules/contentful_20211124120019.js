@@ -14,10 +14,10 @@ class Contentful {
             .getEntries({
                 content_type: "hsluFacts"
             });
-        const hsluDepartements = result.items.sort(
-            (teamA, teamB) => teamA.fields.reihenfolge - teamB.fields.reihenfolge,
-        )
-        console.log(hsluDepartements)
+            const hsluDepartements = result.items.sort(
+                (teamA, teamB) => teamA.fields.reihenfolge - teamB.fields.reihenfolge,
+              )
+              console.log(hsluDepartements)
         return hsluDepartements;
     }
 

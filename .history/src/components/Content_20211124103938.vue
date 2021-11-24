@@ -2,6 +2,7 @@
   <div id="main-container">
     <Start />
     <div id="content-container">
+      <h1>Here comes the content!</h1>
       <ul id="array-rendering">
         <ul v-for="d in departement" :key="d.hsluFacts">
           <Departement

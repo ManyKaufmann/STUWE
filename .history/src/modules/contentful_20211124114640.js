@@ -14,11 +14,11 @@ class Contentful {
             .getEntries({
                 content_type: "hsluFacts"
             });
-        const hsluDepartements = result.items.sort(
-            (teamA, teamB) => teamA.fields.reihenfolge - teamB.fields.reihenfolge,
-        )
-        console.log(hsluDepartements)
-        return hsluDepartements;
+        console.log(result.items + "adsfad");
+        result.items.reihenfolge.sort(function (a, b) {
+            console.log(a - b);
+        });
+        return result.items;
     }
 
     async getStart() {

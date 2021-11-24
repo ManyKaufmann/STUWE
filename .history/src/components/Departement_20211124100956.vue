@@ -4,7 +4,7 @@
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
     <div>gebude.fields.title }}</div>
-    <img :class="gebaede-mg" :src="gebude.fields.file.url" />
+    <img class="gebaede-img" :src="gebude.fields.file.url" />
   </section>
 </template>
 
@@ -23,8 +23,6 @@ export default {
 <style scoped>
 section {
   padding: 25px 80px;
-  padding-top: 50%;
-  padding-bottom: 50%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;
   font-size: 13px;
@@ -35,7 +33,6 @@ section.active {
   opacity: 1;
   font-size: 20px;
 }
-
 .gebaede-img {
   position: relative;
   padding: 25px 80px;
