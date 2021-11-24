@@ -21,42 +21,42 @@ export default {
       chapters: {
         "mein-haus": {
           bearing: 0,
-          center: [8.384674512423006 + 0.005, 47.00304458301781 - 0.001],
+          center: [8.384674512423006 + 0.005, 47.00304458301781 + 0.001],
           zoom: 16,
           speed: 1,
           pitch: 0,
         },
         "soziale-arbeit": {
           bearing: 0,
-          center: [8.314879094092817 + 0.005, 47.04821555100333 - 0.001],
+          center: [8.314879094092817 + 0.005, 47.04821555100333 + 0.001],
           zoom: 16,
           speed: 0.5,
           pitch: 0,
         },
         "wirtschafts-haus": {
           bearing: 0,
-          center: [8.309652 + 0.005, 47.04907 - 0.001],
+          center: [8.309652 + 0.005, 47.04907 + 0.001],
           zoom: 16,
           speed: 0.8,
           pitch: 0,
         },
         "musik-haus": {
           bearing: 0,
-          center: [8.299038 + 0.005, 47.03812 - 0.001],
+          center: [8.299038 + 0.005, 47.03812 + 0.001],
           zoom: 16,
           speed: 0.5,
           pitch: 0,
         },
         "technik-und-architektur": {
           bearing: 0,
-          center: [8.305318 + 0.005, 47.01422 - 0.001],
+          center: [8.305318+ 0.005, 47.01422+ 0.001],
           zoom: 16,
           speed: 0.8,
           pitch: 0,
         },
         "design-und-kunst": {
           bearing: 0,
-          center: [8.277606 + 0.005, 47.07159 - 0.001],
+          center: [8.277606+ 0.005, 47.07159+ 0.001],
           zoom: 16,
           speed: 1,
           pitch: 0,
@@ -78,8 +78,8 @@ export default {
     this.map = new mapboxgl.Map({
       container: this.$refs.container, // container ID
       style: "mapbox://styles/manyk/ckw6cs81x8vi214mpmkqbs9wm", // style URL
-      center: [8.384674512423006 + 0.005, 47.00304458301781 - 0.001], // starting position [lng, lat]
-      zoom: 16, // starting zoom
+      center: [8.384674512423006 + 0.001, 47.00304458301781 + 0.0005], // starting position [lng, lat]
+      zoom: 17, // starting zoom
       bearing: 0,
       pitch: 0,
     });
@@ -257,45 +257,45 @@ export default {
   background-color: #fafafa;
 }
 
-.marker-mein-haus {
-  background-image: url("../assets/Zuhause.svg");
-  width: 150px;
-  height: 75px;
-}
-
 /* .marker-mein-haus {
-  background-image: url("../assets/CharacterText3.svg");
-  width: 800px;
-  height: 600px;
+  background-image: url("../assets/Zuhause.svg");
+  width: 100px;
+  height: 50px;
 } */
+
+.marker-mein-haus {
+  background-image: url("../assets/CharacterText.svg");
+  width: 600px;
+  height: 600px;
+}
 
 .marker-soziale-arbeit {
   background-image: url("../assets/SozialeArbeit_Herz.svg");
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 50px;
 }
 
 .marker-wirtschaft {
   background-image: url("../assets/Wirtschaft_Dollar.svg");
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 50px;
 }
 
 .marker-musik {
   background-image: url("../assets/Musik_Gitarre.svg");
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 50px;
 }
 
 .marker-technik {
   background-image: url("../assets/TechnikArchitektur_Geodreieck.svg");
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 50px;
 }
 
 .marker-design {
   background-image: url("../assets/KunstDesign_Farbpalette.svg");
-  width: 150px;
-  height: 75px;
+  width: 100px;
+  height: 50px;
 }
 </style>

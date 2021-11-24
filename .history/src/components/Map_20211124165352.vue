@@ -224,7 +224,7 @@ export default {
         return false;
       }
       const bounds = element.getBoundingClientRect();
-      return bounds.top < window.innerHeight && bounds.bottom > 0;
+      return bounds.top < window.innerHeight/1.5 && bounds.bottom > 0;
     },
 
     async getContentful() {

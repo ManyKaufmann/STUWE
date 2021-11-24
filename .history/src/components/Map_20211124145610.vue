@@ -21,42 +21,42 @@ export default {
       chapters: {
         "mein-haus": {
           bearing: 0,
-          center: [8.384674512423006 + 0.005, 47.00304458301781 - 0.001],
+          center: [8.384674512423006 + 0.001, 47.00304458301781 + 0.0005],
           zoom: 16,
           speed: 1,
           pitch: 0,
         },
         "soziale-arbeit": {
           bearing: 0,
-          center: [8.314879094092817 + 0.005, 47.04821555100333 - 0.001],
+          center: [8.317526056355966, 47.04858941722488],
           zoom: 16,
-          speed: 0.5,
+          speed: 1,
           pitch: 0,
         },
         "wirtschafts-haus": {
           bearing: 0,
-          center: [8.309652 + 0.005, 47.04907 - 0.001],
+          center: [8.309652, 47.04907],
           zoom: 16,
-          speed: 0.8,
+          speed: 1,
           pitch: 0,
         },
         "musik-haus": {
           bearing: 0,
-          center: [8.299038 + 0.005, 47.03812 - 0.001],
+          center: [8.299038, 47.03812],
           zoom: 16,
-          speed: 0.5,
+          speed: 1,
           pitch: 0,
         },
         "technik-und-architektur": {
           bearing: 0,
-          center: [8.305318 + 0.005, 47.01422 - 0.001],
+          center: [8.305318, 47.01422],
           zoom: 16,
-          speed: 0.8,
+          speed: 1,
           pitch: 0,
         },
         "design-und-kunst": {
           bearing: 0,
-          center: [8.277606 + 0.005, 47.07159 - 0.001],
+          center: [8.277606, 47.07159],
           zoom: 16,
           speed: 1,
           pitch: 0,
@@ -78,8 +78,8 @@ export default {
     this.map = new mapboxgl.Map({
       container: this.$refs.container, // container ID
       style: "mapbox://styles/manyk/ckw6cs81x8vi214mpmkqbs9wm", // style URL
-      center: [8.384674512423006 + 0.005, 47.00304458301781 - 0.001], // starting position [lng, lat]
-      zoom: 16, // starting zoom
+      center: [8.384674512423006 + 0.001, 47.00304458301781 + 0.0005], // starting position [lng, lat]
+      zoom: 17, // starting zoom
       bearing: 0,
       pitch: 0,
     });
@@ -95,7 +95,7 @@ export default {
             coordinates: [8.384674512423006, 47.00304458301781],
           },
           properties: {
-            title: "mein-haus",
+            title: "Mapbox",
             description: "Washington, D.C.",
           },
         },
@@ -103,54 +103,10 @@ export default {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [8.314879094092817, 47.04821555100333],
+            coordinates: [8.317526056355966, 47.04858941722488],
           },
           properties: {
-            title: "soziale-arbeit",
-            description: "San Francisco, California",
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [8.309652, 47.04907],
-          },
-          properties: {
-            title: "wirtschaft",
-            description: "San Francisco, California",
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [8.299038, 47.03812],
-          },
-          properties: {
-            title: "musik",
-            description: "San Francisco, California",
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [8.305318, 47.01422],
-          },
-          properties: {
-            title: "technik-und-architektur",
-            description: "San Francisco, California",
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [8.277606, 47.07159],
-          },
-          properties: {
-            title: "design-und-kunst",
+            title: "Mapbox",
             description: "San Francisco, California",
           },
         },
@@ -159,34 +115,17 @@ export default {
 
     //add markers to map
     geojson.features.forEach((marker) => {
-      let el = "";
-      switch (marker.properties.title) {
-        case "mein-haus":
-          el = document.createElement("div");
-          el.className = "marker-mein-haus";
-          break;
-        case "soziale-arbeit":
-          el = document.createElement("div");
-          el.className = "marker-soziale-arbeit";
-          break;
-        case "wirtschaft":
-          el = document.createElement("div");
-          el.className = "marker-wirtschaft";
-          break;
-        case "musik":
-          el = document.createElement("div");
-          el.className = "marker-musik";
-          break;
-        case "technik-und-architektur":
-          el = document.createElement("div");
-          el.className = "marker-technik";
-          break;
+      // create a HTML element for each feature
+      const el = document.createElement("div");
+      el.style.backgroundImage = `url(${require("../assets/SozialeArbeit_Herz.svg")})`;
+      el.className = "marker";
+      el.style.width = 20+"px";
+      el.style.height = 20+"px";
+      el.style.backgroundSize = 20+"px";
+      el.style.opacity = 1;
 
-        case "design-und-kunst":
-          el = document.createElement("div");
-          el.className = "marker-design";
-          break;
-      }
+
+      // make a marker for each feature and add to the map
       new mapboxgl.Marker(el)
         .setLngLat(marker.geometry.coordinates)
         .addTo(this.map);
@@ -257,45 +196,13 @@ export default {
   background-color: #fafafa;
 }
 
-.marker-mein-haus {
-  background-image: url("../assets/Zuhause.svg");
-  width: 150px;
-  height: 75px;
-}
-
-/* .marker-mein-haus {
-  background-image: url("../assets/CharacterText3.svg");
-  width: 800px;
-  height: 600px;
-} */
-
-.marker-soziale-arbeit {
+.marker {
   background-image: url("../assets/SozialeArbeit_Herz.svg");
-  width: 150px;
-  height: 75px;
-}
-
-.marker-wirtschaft {
-  background-image: url("../assets/Wirtschaft_Dollar.svg");
-  width: 150px;
-  height: 75px;
-}
-
-.marker-musik {
-  background-image: url("../assets/Musik_Gitarre.svg");
-  width: 150px;
-  height: 75px;
-}
-
-.marker-technik {
-  background-image: url("../assets/TechnikArchitektur_Geodreieck.svg");
-  width: 150px;
-  height: 75px;
-}
-
-.marker-design {
-  background-image: url("../assets/KunstDesign_Farbpalette.svg");
-  width: 150px;
-  height: 75px;
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  background-size: 35px;
 }
 </style>

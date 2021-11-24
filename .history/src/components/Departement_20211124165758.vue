@@ -3,6 +3,7 @@
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
+    <div>gebude.fields.title }}</div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
 </template>

@@ -78,8 +78,8 @@ export default {
     this.map = new mapboxgl.Map({
       container: this.$refs.container, // container ID
       style: "mapbox://styles/manyk/ckw6cs81x8vi214mpmkqbs9wm", // style URL
-      center: [8.384674512423006 + 0.005, 47.00304458301781 - 0.001], // starting position [lng, lat]
-      zoom: 16, // starting zoom
+      center: [8.384674512423006 + 0.001, 47.00304458301781 + 0.0005], // starting position [lng, lat]
+      zoom: 17, // starting zoom
       bearing: 0,
       pitch: 0,
     });

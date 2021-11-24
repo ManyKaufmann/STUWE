@@ -3,6 +3,7 @@
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
+    <div>gebude.fields.title }}</div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
 </template>
@@ -23,7 +24,8 @@ export default {
 <style scoped>
 section {
   padding: 25px 80px;
-  padding-top: 40%;
+  padding-top: 10%;
+  padding-bottom: 30%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;
   font-size: 13px;
