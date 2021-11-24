@@ -16,6 +16,7 @@ export default {
     departementName: String,
     infoDepartemente: String,
     studiengnge: String,
+    studiengaenge: String,
     gebude: Object,
   },
 };
