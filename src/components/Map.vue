@@ -125,7 +125,7 @@ export default {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [8.299038, 47.03812],
+            coordinates: [8.296941518783571, 47.032709223659225],
           },
           properties: {
             title: "musik",
@@ -136,7 +136,7 @@ export default {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [8.305318, 47.01422],
+            coordinates: [8.305846452713014 , 47.01418693221685],
           },
           properties: {
             title: "technik-und-architektur",
