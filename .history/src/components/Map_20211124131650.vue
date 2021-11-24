@@ -86,45 +86,46 @@ export default {
     });
 
     let geojson = {
-      type: "FeatureCollection",
+        type: "FeatureCollection",
 
-      features: [
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [ 8.384674512423006, 47.00304458301781],
+        features: [
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [8.384674512423006 + 0.001, 47.00304458301781 + 0.0005],
+            },
+            properties: {
+              title: "Mapbox",
+              description: "Washington, D.C.",
+            },
           },
-          properties: {
-            title: "Mapbox",
-            description: "Washington, D.C.",
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [8.317526056355966, 47.04858941722488],
+            },
+            properties: {
+              title: "Mapbox",
+              description: "San Francisco, California",
+            },
           },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [8.317526056355966, 47.04858941722488],
-          },
-          properties: {
-            title: "Mapbox",
-            description: "San Francisco, California",
-          },
-        },
-      ],
-    };
+        ],
+      };
 
-    //add markers to map
-    geojson.features.forEach((marker) => {
-      // create a HTML element for each feature
-      const el = document.createElement("div");
-      el.className = "marker";
+      //add markers to map
+        geojson.features.forEach((marker) => {
+// add markers to map
+        // create a HTML element for each feature
+        const el = document.createElement("div");
+        el.className = "marker";
 
-      // make a marker for each feature and add to the map
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(this.map);
-    });
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .addTo(this.map);
+      });
   },
 
   methods: {

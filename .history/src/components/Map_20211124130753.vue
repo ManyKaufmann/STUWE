@@ -63,6 +63,34 @@ export default {
           pitch: 0,
         },
       },
+      geojson: {
+        type: "FeatureCollection",
+
+        features: [
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [8.384674512423006 + 0.001, 47.00304458301781 + 0.0005],
+            },
+            properties: {
+              title: "Mapbox",
+              description: "Washington, D.C.",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [8.317526056355966, 47.04858941722488],
+            },
+            properties: {
+              title: "Mapbox",
+              description: "San Francisco, California",
+            },
+          },
+        ],
+      },
     };
   },
 
@@ -84,47 +112,7 @@ export default {
       bearing: 0,
       pitch: 0,
     });
-
-    let geojson = {
-      type: "FeatureCollection",
-
-      features: [
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [ 8.384674512423006, 47.00304458301781],
-          },
-          properties: {
-            title: "Mapbox",
-            description: "Washington, D.C.",
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [8.317526056355966, 47.04858941722488],
-          },
-          properties: {
-            title: "Mapbox",
-            description: "San Francisco, California",
-          },
-        },
-      ],
-    };
-
-    //add markers to map
-    geojson.features.forEach((marker) => {
-      // create a HTML element for each feature
-      const el = document.createElement("div");
-      el.className = "marker";
-
-      // make a marker for each feature and add to the map
-      new mapboxgl.Marker(el)
-        .setLngLat(marker.geometry.coordinates)
-        .addTo(this.map);
-    });
+    // console.log(map);
   },
 
   methods: {
@@ -161,6 +149,20 @@ export default {
       return bounds.top < window.innerHeight && bounds.bottom > 0;
     },
 
+    addMarkers() {
+      // add markers to map
+      for (const feature of this.geojson.features) {
+        // create a HTML element for each feature
+        const el = document.createElement("div");
+        el.className = "marker";
+
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el)
+          .setLngLat(feature.geometry.coordinates)
+          .addTo(map);
+      }
+    },
+
     async getContentful() {
       let result = await contentful.getEntries({
         content_type: "hsluFacts",
@@ -192,8 +194,7 @@ export default {
 }
 
 .marker {
-  /* background-image: url("https://icon-icons.com/de/symbol/google/130924"); */
-  background-color: pink;
+  background-image: url("https://icon-icons.com/de/symbol/google/130924");
   background-size: cover;
   width: 50px;
   height: 50px;

@@ -93,7 +93,7 @@ export default {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [ 8.384674512423006, 47.00304458301781],
+            coordinates: [ 8.384674512423006 , 47.00304458301781],
           },
           properties: {
             title: "Mapbox",
@@ -118,7 +118,7 @@ export default {
     geojson.features.forEach((marker) => {
       // create a HTML element for each feature
       const el = document.createElement("div");
-      el.className = "marker";
+      el.className = "marker-hihi";
 
       // make a marker for each feature and add to the map
       new mapboxgl.Marker(el)

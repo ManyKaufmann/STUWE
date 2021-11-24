@@ -118,7 +118,7 @@ export default {
     geojson.features.forEach((marker) => {
       // create a HTML element for each feature
       const el = document.createElement("div");
-      el.className = "marker";
+      el.className = "marker-hihi";
 
       // make a marker for each feature and add to the map
       new mapboxgl.Marker(el)
