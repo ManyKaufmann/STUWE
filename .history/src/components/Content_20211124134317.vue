@@ -58,7 +58,7 @@ h1 {
   right: 0;
   top: 0;
   /* height: 200vh; */
-  background-color: rgba(255, 226, 102, 0.7);
+  background-color: rgba(224, 205, 214, 0.5);
   /* overflow-y: scroll; */
   backdrop-filter: blur(7px);
 }
