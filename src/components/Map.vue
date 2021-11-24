@@ -93,7 +93,7 @@ export default {
           type: "Feature",
           geometry: {
             type: "Point",
-            coordinates: [ 8.384674512423006, 47.00304458301781],
+            coordinates: [8.384674512423006, 47.00304458301781],
           },
           properties: {
             title: "Mapbox",
