@@ -43,7 +43,7 @@ export default {
         "musik-haus": {
           bearing: 0,
           center: [8.296941518783571 + 0.005, 47.032709223659225 - 0.001],
-          zoom: 16,
+          zoom: 12,
           speed: 0.5,
           pitch: 0,
         },
@@ -58,6 +58,13 @@ export default {
           bearing: 0,
           center: [8.278305530548097 + 0.005, 47.07006336428073 - 0.001],
           zoom: 16,
+          speed: 1,
+          pitch: 0,
+        },
+        "ueberblick": {
+          bearing: 0,
+          center: [8.278305530548097 + 0.005, 47.07006336428073 - 0.001],
+          zoom: 10,
           speed: 1,
           pitch: 0,
         },
