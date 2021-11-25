@@ -1,10 +1,8 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <section class="about">
     <h1>{{ spitzname }}</h1>
     <img class="about-img" :src="aboutFoto.fields.file.url" />
     <p>{{ aufgabe }}</p>
-
      <div id="about-container">
       <ul id="array-rendering">
       <ul v-for="a in about" :key="a.about">
@@ -16,7 +14,7 @@
       </ul>
       </ul>
       </div>
-      </div>
+  </section>
 </template>
 
 <script>
@@ -30,11 +28,7 @@ export default {
     aboutFoto: Object,
     aufgabe: String,
   },
-  data: function () {
-    return {
-      about: [],
-    };
-  },
+  
 
   created: async function () {
     this.about = await contentful.getAbout();
@@ -45,18 +39,18 @@ export default {
 
 <style scoped>
 .about {
+  font-family: "Spartan", sans-serif;
   padding-top: 10px;
   top: 0%;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(62, 190, 152, 0.5);
+  background-color: rgba(255, 226, 102, 0.7);
   backdrop-filter: blur(7px);
 }
 
   .about-img {
-  width: 100px;
   position: relative;
-  padding: 25px 80px;
+  padding: 50px 50px;
 }
 
 </style>
