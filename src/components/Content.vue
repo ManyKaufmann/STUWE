@@ -20,6 +20,7 @@
       <ul v-for="a in about" :key="a.about">
           <About
           :spitzname="a.fields.spitzname"
+          :aboutFoto="a.fields.aboutFoto"
           :aufgabe="a.fields.aufgabe"
           />
       </ul>

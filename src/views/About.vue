@@ -2,8 +2,8 @@
   <div class="about">
     <h1>This is an about page</h1>
     <h1>{{ spitzname }}</h1>
+    <img :class="about-img" :src="aboutFoto.fields.file.url" />
     <p>{{ aufgabe }}</p>
-
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default {
   props: {
     spitzname: String,
     aboutFunktion: String,
+    aboutFoto: Object,
     aufgabe: String,
   },
 };
@@ -28,6 +29,13 @@ export default {
   background-color: rgba(62, 190, 152, 0.5);
   backdrop-filter: blur(7px);
 }
+
+  .about-img {
+  max-width: 50px;
+  position: relative;
+  padding: 25px 80px;
+}
+
 </style>
 
 
