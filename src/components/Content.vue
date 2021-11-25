@@ -9,10 +9,8 @@
             :departementId="d.fields.departementId"
             :infoDepartemente="d.fields.infoDepartemente"
             :studiengnge="d.fields.studiengnge"
-            :studiengaenge="d.fields.studiengaenge"
             :studienauswahl="d.fields.studienauswahl?.html"
             :gebude="d.fields.gebude"
-
           />
         </ul>
       </ul>
