@@ -5,6 +5,7 @@
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
+    <div>{{ studienauswahl }}</div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
 </template>
@@ -18,6 +19,7 @@ export default {
     infoDepartemente: String,
     studiengnge: String,
     studiengaenge: String,
+    studienauswahl: String,
     gebude: Object,
   },
 };
