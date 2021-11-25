@@ -26,6 +26,14 @@ class Contentful {
     console.log(result.items);
     return result.items;
   }
+  async getAbout() {
+    let result = await this.client.getEntries({
+      content_type: "about",
+    });
+    console.log(result.items);
+    return result.items;
+  }
 }
+
 
 export default new Contentful();

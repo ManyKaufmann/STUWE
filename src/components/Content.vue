@@ -15,6 +15,17 @@
         </ul>
       </ul>
     </div>
+    <div id="about-container">
+      <ul id="array-rendering">
+      <ul v-for="a in about" :key="a.about">
+          <About
+          :spitzname="a.fields.spitzname"
+          :aufgabe="a.fields.aufgabe"
+          />
+      </ul>
+      </ul>
+
+      </div>
   </div>
 </template>
 
@@ -22,21 +33,26 @@
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
 import contentful from "../modules/contentful.js";
+import About from '../views/About.vue';
+
 
 export default {
   name: "Content",
   components: {
     Start,
     Departement,
+    About,
   },
   data: function () {
     return {
       departement: [],
+      about: [],
     };
   },
 
   created: async function () {
     this.departement = await contentful.getHsluFacts();
+    this.about = await contentful.getAbout();
   },
 };
 </script>
