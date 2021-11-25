@@ -66,6 +66,7 @@ export default {
   data: function () {
     return {
       departement: [],
+      about: [],
     };
   },
 
