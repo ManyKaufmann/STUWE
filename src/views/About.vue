@@ -2,7 +2,7 @@
   <div class="about">
     <h1>This is an about page</h1>
     <h1>{{ spitzname }}</h1>
-    <img class="about-img" :src="aboutFoto.fields.file.url" />
+    //<img class="about-img" :src="aboutFoto.fields.file.url" />
     <p>{{ aufgabe }}</p>
 
      <div id="about-container">
