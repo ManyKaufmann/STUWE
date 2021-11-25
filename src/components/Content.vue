@@ -8,7 +8,6 @@
             :departementTitel="d?.fields.departementTitel"
             :departementId="d.fields.departementId"
             :infoDepartemente="d.fields.infoDepartemente"
-            :studiengnge="d.fields.studiengnge"
             :studienauswahl="d.fields.studienauswahl?.html"
             :gebude="d.fields.gebude"
           />
@@ -64,8 +63,6 @@ export default {
 
   created: async function () {
     this.departement = await contentful.getHsluFacts();
-
-    //this.departement = await contentful.getStudiengaenge();
     this.about = await contentful.getAbout();
     window.addEventListener("scroll", this.addCharacter);
   },

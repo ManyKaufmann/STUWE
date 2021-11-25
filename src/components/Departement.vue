@@ -14,8 +14,6 @@ export default {
     departementId: String,
     departementTitel: Object,
     infoDepartemente: String,
-    studiengnge: String,
-    studiengaenge: String,
     studienauswahl: String,
     gebude: Object,
   },
