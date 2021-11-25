@@ -1,4 +1,5 @@
 import { createClient } from "contentful";
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 class Contentful {
   constructor() {
@@ -15,9 +16,26 @@ class Contentful {
     const hsluDepartements = result.items.sort(
       (a, b) => a.fields.reihenfolge - b.fields.reihenfolge
     );
-    console.log(hsluDepartements);
+
+    hsluDepartements.forEach (async department => {
+      const rawRichTextField = department.fields.studienauswahl;
+      department.fields.studienauswahl.html = await documentToHtmlString(rawRichTextField);
+  
+    console.log(html);
+    })
+    
+    
+  
+
     return hsluDepartements;
+
   }
+
+  // async getStudiengaenge () {
+  //   let result = await this.client.getEntries('hsluFacts')
+
+        
+  // }
 
   async getStart() {
     let result = await this.client.getEntries({

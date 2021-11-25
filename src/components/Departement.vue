@@ -5,7 +5,7 @@
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
-    <div>{{ studienauswahl }}</div>
+    <div v-html = "studienauswahl"></div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
 </template>

@@ -10,8 +10,9 @@
             :infoDepartemente="d.fields.infoDepartemente"
             :studiengnge="d.fields.studiengnge"
             :studiengaenge="d.fields.studiengaenge"
-            :studienauswahl="d.fields.studienauswahl"
+            :studienauswahl="d.fields.studienauswahl?.html"
             :gebude="d.fields.gebude"
+
           />
         </ul>
       </ul>
@@ -23,6 +24,7 @@
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
 import contentful from "../modules/contentful.js";
+
 
 
 export default {
@@ -39,8 +41,13 @@ export default {
 
   created: async function () {
     this.departement = await contentful.getHsluFacts();
+    
+    //this.departement = await contentful.getStudiengaenge();
     this.about = await contentful.getAbout();
+    
   },
+
+
 };
 </script>
 
