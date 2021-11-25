@@ -16,12 +16,16 @@ class Contentful {
     const hsluDepartements = result.items.sort(
       (a, b) => a.fields.reihenfolge - b.fields.reihenfolge
     );
+    if (hsluDepartements) {
+      hsluDepartements.forEach(async department => {
+        const rawRichTextField = department.fields.studienauswahl;
+        if (department.fields.studienauswahl.html) {
+          department.fields.studienauswahl.html = await documentToHtmlString(rawRichTextField);
 
-    hsluDepartements.forEach(async department => {
-      const rawRichTextField = department.fields.studienauswahl;
-      department.fields.studienauswahl.html = await documentToHtmlString(rawRichTextField);
+        }
 
-    })
+      })
+    }
     return hsluDepartements;
   }
 

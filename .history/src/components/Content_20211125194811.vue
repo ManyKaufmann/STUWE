@@ -14,9 +14,18 @@
           />
         </ul>
       </ul>
-      <About />
     </div>
-    
+    <div id="about-container">
+      <ul id="array-rendering">
+        <ul v-for="a in about" :key="a.about">
+          <About
+            :spitzname="a.fields.spitzname"
+            :aboutFoto="a.fields.aboutFoto"
+            :aufgabe="a.fields.aufgabe"
+          />
+        </ul>
+      </ul>
+    </div>
     <img
       src="../assets/Avatar/SozialeArbeit.svg"
       class="avatar"
@@ -57,7 +66,6 @@ export default {
   data: function () {
     return {
       departement: [],
-      about: [],
     };
   },
 

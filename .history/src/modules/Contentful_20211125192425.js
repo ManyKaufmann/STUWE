@@ -19,8 +19,9 @@ class Contentful {
 
     hsluDepartements.forEach(async department => {
       const rawRichTextField = department.fields.studienauswahl;
-      department.fields.studienauswahl.html = await documentToHtmlString(rawRichTextField);
+        department.fields.studienauswahl.html = await documentToHtmlString(rawRichTextField);
 
+      
     })
     return hsluDepartements;
   }
