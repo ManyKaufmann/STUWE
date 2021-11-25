@@ -81,6 +81,8 @@ export default {
   methods: {
     addCharacter() {
       let sections = [];
+      // let avatar = document.getElementsByClassName("avatar")[0];
+      let avatar = document.getElementById("avatar");
       sections = document.querySelectorAll("section");
       sections.forEach((element) => {
         if (element.classList.contains("active")) {
@@ -91,17 +93,14 @@ export default {
               break;
             case "wirtschafts-haus":
               document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-musik").style.opacity = "0";
               document.getElementById("ava-wirtschaft").style.opacity = "1";
               break;
             case "musik-haus":
-              document.getElementById("ava-wirtschaft").style.opacity = "0";
-              document.getElementById("ava-technik-und-architektur").style.opacity = "0";
+              document.getElementById("ava-soziale-arbeit").style.opacity = "0";
               document.getElementById("ava-musik").style.opacity = "1";
               break;
             case "technik-und-architektur":
-              document.getElementById("ava-musik").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
+              document.getElementById("ava-soziale-arbeit").style.opacity = "0";
               document.getElementById("ava-technik-und-architektur").style.opacity = "1";
               break;
             case "design-und-kunst":
@@ -110,8 +109,8 @@ export default {
               break;
             default:
               document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
 
+              // avatar.style.backgroundImage = `none`;
           }
         }
       });

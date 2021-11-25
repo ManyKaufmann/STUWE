@@ -110,8 +110,6 @@ export default {
               break;
             default:
               document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
-
           }
         }
       });

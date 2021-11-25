@@ -45,12 +45,9 @@
       src="../assets/Avatar/TechnikArchitektur.svg"
       class="avatar"
       id="ava-technik-und-architektur"
-    /> 
-     <img
-      src="../assets/Avatar/KunstDesign.svg"
-      class="avatar"
-      id="ava-design-und-kunst"
-      /> 
+    />
+    <div class="avatar"></div>
+    <div class="avatar"></div>
   </div>
 </template>
 
@@ -81,6 +78,8 @@ export default {
   methods: {
     addCharacter() {
       let sections = [];
+      // let avatar = document.getElementsByClassName("avatar")[0];
+      let avatar = document.getElementById("avatar");
       sections = document.querySelectorAll("section");
       sections.forEach((element) => {
         if (element.classList.contains("active")) {
@@ -88,30 +87,33 @@ export default {
             case "soziale-arbeit":
               document.getElementById("ava-soziale-arbeit").style.opacity = "1";
               document.getElementById("ava-wirtschaft").style.opacity = "0";
+
+              // avatar.style.backgroundImage = `url(${require("../assets/Avatar/SozialeArbeit.svg")})`;
               break;
             case "wirtschafts-haus":
               document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-musik").style.opacity = "0";
               document.getElementById("ava-wirtschaft").style.opacity = "1";
+
+              // avatar.style.backgroundImage = `url(${require("../assets/Avatar/Wirtschaft.svg")})`;
               break;
             case "musik-haus":
-              document.getElementById("ava-wirtschaft").style.opacity = "0";
-              document.getElementById("ava-technik-und-architektur").style.opacity = "0";
+              document.getElementById("ava-soziale-arbeit").style.opacity = "0";
               document.getElementById("ava-musik").style.opacity = "1";
+
+              // avatar.style.backgroundImage = `url(${require("../assets/Avatar/Musik.svg")})`;
               break;
             case "technik-und-architektur":
-              document.getElementById("ava-musik").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
+              document.getElementById("ava-soziale-arbeit").style.opacity = "0";
               document.getElementById("ava-technik-und-architektur").style.opacity = "1";
+              // avatar.style.backgroundImage = `url(${require("../assets/Avatar/TechnikArchitektur.svg")})`;
               break;
             case "design-und-kunst":
-              document.getElementById("ava-technik-und-architektur").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "1";
+              avatar.style.backgroundImage = `url(${require("../assets/Avatar/KunstDesign.svg")})`;
               break;
             default:
               document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
 
+              // avatar.style.backgroundImage = `none`;
           }
         }
       });

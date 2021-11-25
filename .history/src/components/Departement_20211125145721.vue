@@ -26,7 +26,7 @@ section {
   padding-top: 40%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;
-  font-size: 18px;
+  font-size: 13px;
   font-family: "Raleway", sans-serif;
 }
 
@@ -37,16 +37,10 @@ section.active {
 
 .departement-info {
   font-family: "Spartan", sans-serif;
-  text-align: left;
-  padding: 5%
-
 }
 
 .studienauswahl {
   font-family: "Spartan", sans-serif;
-  text-align: left;
-  padding: 5%
-
 }
 
 .gebaede-img {

@@ -101,8 +101,8 @@ export default {
               break;
             case "technik-und-architektur":
               document.getElementById("ava-musik").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
-              document.getElementById("ava-technik-und-architektur").style.opacity = "1";
+              document.getElementById("ava-technik-und-architektur").style.opacity = "0";
+              document.getElementById("ava-design-und-kunst").style.opacity = "1";
               break;
             case "design-und-kunst":
               document.getElementById("ava-technik-und-architektur").style.opacity = "0";
@@ -110,7 +110,7 @@ export default {
               break;
             default:
               document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
+              document.getElementById("ava-design-und-kunst").style.opacity = "1";
 
           }
         }

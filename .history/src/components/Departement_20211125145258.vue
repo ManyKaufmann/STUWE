@@ -1,9 +1,11 @@
 <template>
   <section :id="departementId">
-    <img :class="dep - titel" :src="departementTitel.fields.file.url" />
+    <img :class="dep-titel" :src="departementTitel.fields.file.url" />
+    <h1>{{ departementName }}</h1>
     <div class="departement-info">{{ infoDepartemente }}</div>
-    <div class="studienauswahl" v-html="studienauswahl"></div>
-    <img :class="gebaede - mg" :src="gebude.fields.file.url" />
+    <div>{{ studiengnge }}</div>
+    <div v-html = "studienauswahl"></div>
+    <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
 </template>
 
@@ -26,26 +28,18 @@ section {
   padding-top: 40%;
   border-bottom: 0px solid #ddd;
   opacity: 0.25;
-  font-size: 18px;
+  font-size: 13px;
   font-family: "Raleway", sans-serif;
 }
 
 section.active {
   opacity: 1;
   font-size: 20px;
+  
 }
 
 .departement-info {
-  font-family: "Spartan", sans-serif;
-  text-align: left;
-  padding: 5%
-
-}
-
-.studienauswahl {
-  font-family: "Spartan", sans-serif;
-  text-align: left;
-  padding: 5%
+font-family: 'Spartan', sans-serif;
 
 }
 

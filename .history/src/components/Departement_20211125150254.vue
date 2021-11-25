@@ -38,15 +38,12 @@ section.active {
 .departement-info {
   font-family: "Spartan", sans-serif;
   text-align: left;
-  padding: 5%
 
 }
 
 .studienauswahl {
   font-family: "Spartan", sans-serif;
   text-align: left;
-  padding: 5%
-
 }
 
 .gebaede-img {

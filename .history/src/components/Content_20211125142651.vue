@@ -26,31 +26,7 @@
         </ul>
       </ul>
     </div>
-    <img
-      src="../assets/Avatar/SozialeArbeit.svg"
-      class="avatar"
-      id="ava-soziale-arbeit"
-    />
-    <img
-      src="../assets/Avatar/Wirtschaft.svg"
-      class="avatar"
-      id="ava-wirtschaft"
-    /> 
-    <img
-      src="../assets/Avatar/Musik.svg"
-      class="avatar"
-      id="ava-musik"
-    /> 
-    <img
-      src="../assets/Avatar/TechnikArchitektur.svg"
-      class="avatar"
-      id="ava-technik-und-architektur"
-    /> 
-     <img
-      src="../assets/Avatar/KunstDesign.svg"
-      class="avatar"
-      id="ava-design-und-kunst"
-      /> 
+    <div id="avatar"></div>
   </div>
 </template>
 
@@ -73,7 +49,7 @@ export default {
 
   created: async function () {
     this.departement = await contentful.getHsluFacts();
-
+    
     //this.departement = await contentful.getStudiengaenge();
     this.about = await contentful.getAbout();
     window.addEventListener("scroll", this.addCharacter);
@@ -81,37 +57,31 @@ export default {
   methods: {
     addCharacter() {
       let sections = [];
+      // let avatar = document.getElementsByClassName("avatar")[0];
+      let avatar = document.getElementById("avatar");
       sections = document.querySelectorAll("section");
       sections.forEach((element) => {
         if (element.classList.contains("active")) {
           switch (element.id) {
             case "soziale-arbeit":
-              document.getElementById("ava-soziale-arbeit").style.opacity = "1";
-              document.getElementById("ava-wirtschaft").style.opacity = "0";
+              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg")})`;
               break;
             case "wirtschafts-haus":
-              document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-musik").style.opacity = "0";
-              document.getElementById("ava-wirtschaft").style.opacity = "1";
+              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_Wirtschaft.svg")})`;
               break;
             case "musik-haus":
-              document.getElementById("ava-wirtschaft").style.opacity = "0";
-              document.getElementById("ava-technik-und-architektur").style.opacity = "0";
-              document.getElementById("ava-musik").style.opacity = "1";
+              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_Musik.svg")})`;
               break;
             case "technik-und-architektur":
-              document.getElementById("ava-musik").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
-              document.getElementById("ava-technik-und-architektur").style.opacity = "1";
+              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_TechnikArchitektur.svg")})`;
               break;
             case "design-und-kunst":
-              document.getElementById("ava-technik-und-architektur").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "1";
+              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
               break;
             default:
-              document.getElementById("ava-soziale-arbeit").style.opacity = "0";
-              document.getElementById("ava-design-und-kunst").style.opacity = "0";
+              avatar.style.backgroundImage = `none`;
 
+              console.log("id doesn't exists");
           }
         }
       });
@@ -121,13 +91,14 @@ export default {
   unmounted() {
     window.removeEventListener("scroll", this.addCharacter);
   },
+
+
 };
 </script>
 
-
 <style>
 h1 {
-  font-family: "Spartan", sans-serif;
+  color: black;
 }
 
 .main-container {
@@ -146,16 +117,26 @@ h1 {
   backdrop-filter: blur(7px);
 }
 
-.avatar {
+#avatar {
   z-index: 3;
   display: block;
+  /* background-image: url("../assets/CharacterText3.svg"); */
   background-image: none;
-  width: 1000px;
-  height: 450px;
-  position: fixed;
+  width: 600px;
+  height: 400px;
+  position: sticky;
   bottom: 0;
-  opacity: 0;
-    transition: visibility 5s, opacity 1s linear;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 </style>
