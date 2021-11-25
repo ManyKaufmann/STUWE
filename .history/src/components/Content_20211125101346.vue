@@ -26,7 +26,7 @@
         </ul>
       </ul>
     </div>
-    <div id="avatar"></div>
+    <div class="avatar"></div>
   </div>
 </template>
 
@@ -58,34 +58,9 @@ export default {
   methods: {
     addCharacter() {
       let sections = [];
-      // let avatar = document.getElementsByClassName("avatar")[0];
-      let avatar = document.getElementById("avatar");
       sections = document.querySelectorAll("section");
-      sections.forEach((element) => {
-        if (element.classList.contains("active")) {
-          switch (element.id) {
-            case "soziale-arbeit":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg")})`;
-              break;
-            case "wirtschafts-haus":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_Wirtschaft.svg")})`;
-              break;
-            case "musik-haus":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_Musik.svg")})`;
-              break;
-            case "technik-und-architektur":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_TechnikArchitektur.svg")})`;
-              break;
-            case "design-und-kunst":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
-              break;
-            default:
-              avatar.style.backgroundImage = `none`;
-
-              console.log("id doesn't exists");
-          }
-        }
-      });
+          
+      
     },
   },
 
@@ -95,7 +70,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
   color: black;
 }
@@ -116,26 +91,13 @@ h1 {
   backdrop-filter: blur(7px);
 }
 
-#avatar {
+.avatar {
   z-index: 3;
   display: block;
-  /* background-image: url("../assets/CharacterText3.svg"); */
-  background-image: none;
+  background-image: url("../assets/CharacterText3.svg");
   width: 600px;
   height: 400px;
   position: sticky;
   bottom: 0;
-  animation: 1s fadeIn;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
 }
 </style>

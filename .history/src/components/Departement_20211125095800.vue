@@ -37,7 +37,7 @@ section.active {
   
 }
 
-section:has(.active) {
+section.active {
   z-index: 3;
   display: block;
   background-image: url("../assets/CharacterText3.svg");

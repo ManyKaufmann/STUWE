@@ -37,12 +37,13 @@ section.active {
   
 }
 
-section:has(.active) {
+section.active {
   z-index: 3;
   display: block;
   background-image: url("../assets/CharacterText3.svg");
   width: 600px;
   height: 400px;
+  position: sticky;
   bottom: 0  
 }
 

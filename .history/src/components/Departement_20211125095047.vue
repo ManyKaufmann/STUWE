@@ -7,6 +7,7 @@
     <div>{{ studiengnge }}</div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
+  <div class="avatar"></div>
 </template>
 
 <script>
@@ -34,20 +35,21 @@ section {
 section.active {
   opacity: 1;
   font-size: 20px;
-  
-}
-
-section:has(.active) {
-  z-index: 3;
-  display: block;
-  background-image: url("../assets/CharacterText3.svg");
-  width: 600px;
-  height: 400px;
-  bottom: 0  
 }
 
 .gebaede-img {
   position: relative;
   padding: 25px 80px;
+}
+
+
+.avatar {
+  z-index: 3;
+  display: block;
+  background-image: url("../assets/CharacterText3.svg");
+  width: 600px;
+  height: 400px;
+  position: sticky;
+  bottom: 0;
 }
 </style>

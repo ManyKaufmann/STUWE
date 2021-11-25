@@ -64,6 +64,9 @@ export default {
       sections.forEach((element) => {
         if (element.classList.contains("active")) {
           switch (element.id) {
+            case "mein-haus":
+              avatar.style.backgroundImage = `none`;
+              break;
             case "soziale-arbeit":
               avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg")})`;
               break;
@@ -80,8 +83,6 @@ export default {
               avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
               break;
             default:
-              avatar.style.backgroundImage = `none`;
-
               console.log("id doesn't exists");
           }
         }

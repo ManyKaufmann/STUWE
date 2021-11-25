@@ -37,13 +37,9 @@ section.active {
   
 }
 
-section:has(.active) {
-  z-index: 3;
-  display: block;
+section.active {
   background-image: url("../assets/CharacterText3.svg");
-  width: 600px;
-  height: 400px;
-  bottom: 0  
+  
 }
 
 .gebaede-img {

@@ -80,8 +80,6 @@ export default {
               avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
               break;
             default:
-              avatar.style.backgroundImage = `none`;
-
               console.log("id doesn't exists");
           }
         }
@@ -126,16 +124,16 @@ h1 {
   position: sticky;
   bottom: 0;
   animation: 1s fadeIn;
-  animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
+  99% {
+    visibility: hidden;
   }
   100% {
     visibility: visible;
-    opacity: 1;
   }
 }
 </style>

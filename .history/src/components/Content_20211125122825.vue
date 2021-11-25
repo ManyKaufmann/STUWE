@@ -63,27 +63,13 @@ export default {
       sections = document.querySelectorAll("section");
       sections.forEach((element) => {
         if (element.classList.contains("active")) {
-          switch (element.id) {
-            case "soziale-arbeit":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg")})`;
-              break;
-            case "wirtschafts-haus":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_Wirtschaft.svg")})`;
-              break;
-            case "musik-haus":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_Musik.svg")})`;
-              break;
-            case "technik-und-architektur":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_TechnikArchitektur.svg")})`;
-              break;
-            case "design-und-kunst":
-              avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
-              break;
-            default:
-              avatar.style.backgroundImage = `none`;
-
-              console.log("id doesn't exists");
+          if (element.id == "soziale-arbeit") {
+            avatar.style.backgroundImage = "../assets/AvatarCharacterText3.svg)";
           }
+          // if (element.id == "wirtschaft") {
+          //   let avatar = document.getElementsByClassName("avatar")[0];
+          //   avatar.id = "a-wirtschaft";
+          // }
         }
       });
     },
@@ -125,17 +111,13 @@ h1 {
   height: 400px;
   position: sticky;
   bottom: 0;
-  animation: 1s fadeIn;
-  animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
+/* .avatar#a-soziale-arbeit {
+  background-image: url("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg");
 }
+
+.avatar#a-wirtschaft {
+  background-image: url("../assets/Avatar/Hauptcharacter_Wirtschaft.svg");
+} */
 </style>

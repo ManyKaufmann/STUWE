@@ -80,8 +80,6 @@ export default {
               avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
               break;
             default:
-              avatar.style.backgroundImage = `none`;
-
               console.log("id doesn't exists");
           }
         }
@@ -125,17 +123,13 @@ h1 {
   height: 400px;
   position: sticky;
   bottom: 0;
-  animation: 1s fadeIn;
-  animation-fill-mode: forwards;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    visibility: visible;
-    opacity: 1;
-  }
+/* .avatar#a-soziale-arbeit {
+  background-image: url("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg");
 }
+
+.avatar#a-wirtschaft {
+  background-image: url("../assets/Avatar/Hauptcharacter_Wirtschaft.svg");
+} */
 </style>
