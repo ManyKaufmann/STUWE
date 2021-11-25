@@ -54,12 +54,14 @@
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
 import contentful from "../modules/contentful.js";
+import About from "./About.vue"
 
 export default {
   name: "Content",
   components: {
     Start,
     Departement,
+    About,
   },
   data: function () {
     return {
