@@ -7,7 +7,6 @@
 .about-container {
   padding-top: 10px;
   padding-bottom: 5px;;
-
   top: 0%;
   height: 110vh;
   width: 100vw;

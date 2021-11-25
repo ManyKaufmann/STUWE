@@ -14,8 +14,9 @@
           />
         </ul>
       </ul>
-      <About />
+      
     </div>
+    <About />
     
     <img
       src="../assets/Avatar/SozialeArbeit.svg"
