@@ -1,6 +1,5 @@
 <template>
   <div class="start-container">
-    <h1>hello</h1>
   </div>
 </template>
 
@@ -10,7 +9,9 @@
   top: 0%;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(205, 8, 231, 0.5);
+  background-image: url("../assets/LandingPage.svg");
+  background-size: cover;
   backdrop-filter: blur(7px);
 }
 </style>
+
