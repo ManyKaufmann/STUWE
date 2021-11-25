@@ -5,7 +5,7 @@
       <ul id="array-rendering">
         <ul v-for="d in departement" :key="d.hsluFacts">
           <Departement
-            :departementTitel="d?.fields.departementTitel"
+            :departementTitel="d.fields?.departementTitel"
             :departementId="d.fields.departementId"
             :infoDepartemente="d.fields.infoDepartemente"
             :studiengnge="d.fields.studiengnge"
