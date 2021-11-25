@@ -10,9 +10,7 @@
             :infoDepartemente="d.fields.infoDepartemente"
             :studiengnge="d.fields.studiengnge"
             :studiengaenge="d.fields.studiengaenge"
-            :studienauswahl="d.fields.studienauswahl?.html"
             :gebude="d.fields.gebude"
-
           />
         </ul>
       </ul>
@@ -36,23 +34,24 @@
 import Start from "./Start.vue";
 import Departement from "./Departement.vue";
 import contentful from "../modules/contentful.js";
+import About from "../views/About.vue";
 
 export default {
   name: "Content",
   components: {
     Start,
     Departement,
+    About,
   },
   data: function () {
     return {
       departement: [],
+      about: [],
     };
   },
 
   created: async function () {
     this.departement = await contentful.getHsluFacts();
-    
-    //this.departement = await contentful.getStudiengaenge();
     this.about = await contentful.getAbout();
     window.addEventListener("scroll", this.addCharacter);
   },
@@ -81,8 +80,6 @@ export default {
               avatar.style.backgroundImage = `url(${require("../assets/Avatar/Hauptcharacter_KunstDesign.svg")})`;
               break;
             default:
-              avatar.style.backgroundImage = `none`;
-
               console.log("id doesn't exists");
           }
         }
@@ -93,8 +90,6 @@ export default {
   unmounted() {
     window.removeEventListener("scroll", this.addCharacter);
   },
-
-
 };
 </script>
 
@@ -128,17 +123,23 @@ h1 {
   height: 400px;
   position: sticky;
   bottom: 0;
-  animation: 1s fadeIn;
-  animation-fill-mode: forwards;
+    animation: 1s fadeIn;
+
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
+  99% {
+    visibility: hidden;
   }
   100% {
     visibility: visible;
-    opacity: 1;
   }
+
+/* .avatar#a-soziale-arbeit {
+  background-image: url("../assets/Avatar/Hauptcharacter_SozialeArbeit.svg");
 }
+
+.avatar#a-wirtschaft {
+  background-image: url("../assets/Avatar/Hauptcharacter_Wirtschaft.svg");
+} */
 </style>

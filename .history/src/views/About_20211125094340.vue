@@ -4,24 +4,10 @@
     <h1>{{ spitzname }}</h1>
     <img class="about-img" :src="aboutFoto.fields.file.url" />
     <p>{{ aufgabe }}</p>
-
-     <div id="about-container">
-      <ul id="array-rendering">
-      <ul v-for="a in about" :key="a.about">
-          <About
-          :spitzname="a.fields.spitzname"
-          :aboutFoto="a.fields.aboutFoto"
-          :aufgabe="a.fields.aufgabe"
-          />
-      </ul>
-      </ul>
-      </div>
-      </div>
+  </div>
 </template>
 
 <script>
-import contentful from "../modules/contentful.js";
-
 export default {
   name: "About",
   props: {
@@ -29,15 +15,6 @@ export default {
     aboutFunktion: String,
     aboutFoto: Object,
     aufgabe: String,
-  },
-  data: function () {
-    return {
-      about: [],
-    };
-  },
-
-  created: async function () {
-    this.about = await contentful.getAbout();
   },
 };
 </script>

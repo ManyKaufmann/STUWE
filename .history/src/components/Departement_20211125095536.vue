@@ -5,7 +5,6 @@
     <h1>{{ departementName }}</h1>
     <div>{{ infoDepartemente }}</div>
     <div>{{ studiengnge }}</div>
-    <div v-html = "studienauswahl"></div>
     <img :class="gebaede-mg" :src="gebude.fields.file.url" />
   </section>
 </template>
@@ -19,7 +18,6 @@ export default {
     infoDepartemente: String,
     studiengnge: String,
     studiengaenge: String,
-    studienauswahl: String,
     gebude: Object,
   },
 };
@@ -36,16 +34,8 @@ section {
 section.active {
   opacity: 1;
   font-size: 20px;
-  
-}
-
-section:has(.active) {
-  z-index: 3;
-  display: block;
   background-image: url("../assets/CharacterText3.svg");
-  width: 600px;
-  height: 400px;
-  bottom: 0  
+  
 }
 
 .gebaede-img {
