@@ -147,7 +147,7 @@ h1 {
   display: block;
   background-image: none;
   width: 900px;
-  height: 350px;
+  height: 450px;
   position: fixed;
   bottom: 0;
   opacity: 0;
