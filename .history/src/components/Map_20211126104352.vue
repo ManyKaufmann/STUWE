@@ -9,6 +9,7 @@
 <script>
 // @ is an alias to /src
 import mapboxgl from "mapbox-gl";
+import contentful from "../modules/contentful";
 
 export default {
   name: "Map",
@@ -225,6 +226,14 @@ export default {
       }
       const bounds = element.getBoundingClientRect();
       return bounds.top < window.innerHeight && bounds.bottom > 0;
+    },
+
+    async getContentful() {
+      let result = await contentful.getEntries({
+        content_type: "hsluFacts",
+      });
+      console.log(result.items[0].fields.departementName);
+      this.departements = result.items[0].fields.departementName;
     },
   },
 };

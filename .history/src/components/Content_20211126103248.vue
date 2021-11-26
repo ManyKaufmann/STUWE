@@ -122,7 +122,6 @@ export default {
 <style>
 h1 {
   font-family: "Spartan", sans-serif;
-  font-size: 1.5rem
 }
 
 .main-container {

@@ -1,12 +1,12 @@
 <template>
-  <div>
-    <Main />
-  </div>
+<div>
+<Main/>
+</div>
   <router-view />
 </template>
 
 <style>
-body {
+body{
   margin: 0;
 }
 #app {
@@ -22,7 +22,7 @@ body {
 }
 
 li > p {
-  margin: 0.3rem;
+  margin:0;
 }
 #nav a {
   font-weight: bold;
@@ -36,4 +36,5 @@ li > p {
 ul {
   list-style-type: disc;
 }
+
 </style>

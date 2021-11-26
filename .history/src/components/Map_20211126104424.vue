@@ -9,6 +9,7 @@
 <script>
 // @ is an alias to /src
 import mapboxgl from "mapbox-gl";
+import contentful from "../modules/contentful";
 
 export default {
   name: "Map",

@@ -22,7 +22,7 @@ body {
 }
 
 li > p {
-  margin: 0.3rem;
+  margin: 1;
 }
 #nav a {
   font-weight: bold;

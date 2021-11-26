@@ -46,6 +46,10 @@ section.active {
   padding: 5%;
 }
 
+ul {
+  list-style-type: kannada !
+}
+
 .gebaede-img {
   position: relative;
   padding: 25px 80px;

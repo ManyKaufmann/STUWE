@@ -36,14 +36,17 @@ section.active {
 .departement-info {
   font-family: "Spartan", sans-serif;
   text-align: left;
-  padding-right: 15%;
-  padding-left: 5%;
+  padding: 5%;
 }
 
 .studienauswahl {
   font-family: "Spartan", sans-serif;
   text-align: left;
   padding: 5%;
+}
+
+ul {
+  list-style-type: kannada important!
 }
 
 .gebaede-img {
