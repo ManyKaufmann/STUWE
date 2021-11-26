@@ -31,7 +31,7 @@ body{
 }
 
 ul {
-  list-style-type: disc;
+  list-style-type: kannada;
 }
 
 </style>

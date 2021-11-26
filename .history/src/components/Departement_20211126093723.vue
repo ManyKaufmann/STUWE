@@ -43,10 +43,11 @@ section.active {
   font-family: "Spartan", sans-serif;
   text-align: left;
   padding: 5%;
+  list-style-type: kannada;
 }
 
-ul {
-  list-style-type: kannada !
+ul.studienauswahl {
+  list-style-type: kannada;
 }
 
 .gebaede-img {
